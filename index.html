@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusDigital - Agencia Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="44" height="44" rx="10" fill="#DC2626"/>
+                    <path d="M12 12L12 36L18 36L18 26L30 36L37 36L24 24L36 12L29 12L18 22L18 12Z" fill="white"/>
+                </svg>
+                <span class="logo-text">Nexus<span class="logo-highlight">Digital</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#por-que" class="nav-link">Por que nosotros</a></li>
+                <li><a href="#contacto" class="nav-link nav-cta-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge anim-fade-up">
+                    <span class="badge-dot"></span>
+                    Agencia Digital de Alto Rendimiento
+                </div>
+                <h1 class="hero-title anim-fade-up" style="animation-delay: 0.1s">
+                    Impulsamos tu marca en el <span class="text-gradient">mundo digital.</span>
+                </h1>
+                <p class="hero-subtitle anim-fade-up" style="animation-delay: 0.2s">
+                    Estrategias innovadoras, diseños impactantes y desarrollo tecnologico de vanguardia. Transformamos ideas en experiencias digitales que generan resultados reales.
+                </p>
+                <div class="hero-buttons anim-fade-up" style="animation-delay: 0.3s">
+                    <a href="#contacto" class="btn btn-primary">
+                        <span>Contáctanos</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">
+                        <span>Ver servicios</span>
+                    </a>
+                </div>
+                <div class="hero-stats anim-fade-up" style="animation-delay: 0.4s">
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Proyectos entregados</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+                        <span class="stat-label">Clientes satisfechos</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Anos de experiencia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual anim-fade-up" style="animation-delay: 0.3s">
+                <div class="hero-card hero-card-1">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <span>Marketing Digital</span>
+                </div>
+                <div class="hero-card hero-card-2">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <span>Diseno Grafico</span>
+                </div>
+                <div class="hero-card hero-card-3">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <span>Desarrollo Web</span>
+                </div>
+                <div class="hero-mockup">
+                    <div class="mockup-browser">
+                        <div class="mockup-bar">
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-header"></div>
+                            <div class="mockup-text"></div>
+                            <div class="mockup-text short"></div>
+                            <div class="mockup-grid-blocks">
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag anim-fade-up">Nuestros Servicios</span>
+                <h2 class="section-title anim-fade-up">Soluciones digitales <span class="text-gradient">integrales</span></h2>
+                <p class="section-desc anim-fade-up">Ofrecemos un ecosistema completo de servicios digitales disenados para impulsar el crecimiento de tu negocio en el entorno online.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card anim-fade-up">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10"/>
+                            <path d="M18 20V4"/>
+                            <path d="M6 20v-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Marketing Digital</h3>
+                    <p class="service-desc">Estrategias basadas en datos para maximizar tu presencia online. SEO, SEM, redes sociales, email marketing y campañas publicitarias que generan leads cualificados y aumentan tu ROI.</p>
+                    <ul class="service-features">
+                        <li>SEO & SEM</li>
+                        <li>Redes Sociales</li>
+                        <li>Email Marketing</li>
+                        <li>Analitica & KPIs</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Comenzar proyecto
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card featured anim-fade-up" style="animation-delay: 0.1s">
+                    <div class="service-badge">Popular</div>
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Diseno Grafico</h3>
+                    <p class="service-desc">Identidades visuales que cuentan historias. Desde logos y branding hasta material publicitario y diseno UI/UX, creamos elementos visuales que conectan con tu audiencia.</p>
+                    <ul class="service-features">
+                        <li>Branding & Logo</li>
+                        <li>UI/UX Design</li>
+                        <li>Material Publicitario</li>
+                        <li>Social Media Design</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Comenzar proyecto
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card anim-fade-up" style="animation-delay: 0.2s">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Desarrollo Web</h3>
+                    <p class="service-desc">Sitios web y aplicaciones de alto rendimiento. Desarrollamos soluciones a medida con las ultimas tecnologias, optimizadas para velocidad, SEO y experiencia de usuario.</p>
+                    <ul class="service-features">
+                        <li>Sitios Web Corporativos</li>
+                        <li>E-commerce</li>
+                        <li>Aplicaciones Web</li>
+                        <li>Mantenimiento & Soporte</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Comenzar proyecto
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portafolio" id="portafolio">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag anim-fade-up">Portafolio</span>
+                <h2 class="section-title anim-fade-up">Proyectos que <span class="text-gradient">hablan por si solos</span></h2>
+                <p class="section-desc anim-fade-up">Una seleccion de nuestros trabajos mas recientes que demuestran nuestra capacidad para entregar resultados excepcionales.</p>
+            </div>
+            <div class="portfolio-filters anim-fade-up">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="diseno">Diseno</button>
+                <button class="filter-btn" data-filter="desarrollo">Desarrollo</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card anim-fade-up" data-category="marketing">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Marketing Digital</span>
+                            <h3 class="portfolio-title">Campana Red Bull</h3>
+                            <p class="portfolio-desc">Estrategia integral de marketing digital que incremento el engagement un 340%</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-phone">
+                                <div class="mock-screen">
+                                    <div class="mock-story" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);"></div>
+                                    <div class="mock-story" style="background: linear-gradient(45deg, #a55eea, #8854d0);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card anim-fade-up" data-category="diseno" style="animation-delay: 0.1s">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Diseno Grafico</span>
+                            <h3 class="portfolio-title">Brand Identity TechFlow</h3>
+                            <p class="portfolio-desc">Rediseño completo de identidad visual para startup tecnologica</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-brand">
+                                <div class="mock-logo-shape"></div>
+                                <div class="mock-text-lines">
+                                    <div class="mock-line long"></div>
+                                    <div class="mock-line medium"></div>
+                                    <div class="mock-line short"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card anim-fade-up" data-category="desarrollo" style="animation-delay: 0.2s">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Desarrollo Web</span>
+                            <h3 class="portfolio-title">E-commerce LuxeShop</h3>
+                            <p class="portfolio-desc">Plataforma de comercio electronico con conversion del 4.8%</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-browser-small">
+                                <div class="mock-browser-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mock-browser-body">
+                                    <div class="mock-nav-bar"></div>
+                                    <div class="mock-hero-bar"></div>
+                                    <div class="mock-product-grid">
+                                        <div class="mock-product"></div>
+                                        <div class="mock-product"></div>
+                                        <div class="mock-product"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card anim-fade-up" data-category="marketing" style="animation-delay: 0.1s">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Marketing Digital</span>
+                            <h3 class="portfolio-title">Growth EcoVerde</h3>
+                            <p class="portfolio-desc">Campana de growth hacking con 50K leads en 3 meses</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-chart">
+                                <div class="chart-bar" style="height: 30%"></div>
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 65%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card anim-fade-up" data-category="diseno" style="animation-delay: 0.2s">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4a1942 0%, #6c3483 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Diseno Grafico</span>
+                            <h3 class="portfolio-title">UI/UX MedConnect</h3>
+                            <p class="portfolio-desc">Diseno de interfaz para app de telemedicina con 4.9 estrellas</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-phone">
+                                <div class="mock-screen mock-app">
+                                    <div class="mock-app-header"></div>
+                                    <div class="mock-app-cards">
+                                        <div class="mock-app-card"></div>
+                                        <div class="mock-app-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card anim-fade-up" data-category="desarrollo" style="animation-delay: 0.3s">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #1B2631 0%, #2C3E50 100%);">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Desarrollo Web</span>
+                            <h3 class="portfolio-title">SaaS DataPulse</h3>
+                            <p class="portfolio-desc">Plataforma SaaS de analitica con dashboard en tiempo real</p>
+                        </div>
+                        <div class="portfolio-mockup">
+                            <div class="mock-dashboard">
+                                <div class="mock-sidebar"></div>
+                                <div class="mock-main">
+                                    <div class="mock-dash-header"></div>
+                                    <div class="mock-dash-grid">
+                                        <div class="mock-dash-card"></div>
+                                        <div class="mock-dash-card"></div>
+                                        <div class="mock-dash-card wide"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        <div class="section-container">
+            <div class="nosotros-grid">
+                <div class="nosotros-visual anim-fade-up">
+                    <div class="nosotros-image-wrapper">
+                        <div class="nosotros-image-bg"></div>
+                        <div class="nosotros-card-floating">
+                            <div class="floating-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <strong>Proyectos exitosos</strong>
+                                <span>+150 entregados</span>
+                            </div>
+                        </div>
+                        <div class="nosotros-card-floating card-2">
+                            <div class="floating-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <strong>Equipo experto</strong>
+                                <span>12 profesionales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-content">
+                    <span class="section-tag anim-fade-up">Sobre Nosotros</span>
+                    <h2 class="section-title anim-fade-up" style="text-align: left;">Somos el socio digital que tu negocio <span class="text-gradient">necesita</span></h2>
+                    <p class="nosotros-text anim-fade-up">
+                        NexusDigital nacio con la vision de cerrar la brecha entre las empresas y el potencial ilimitado del mundo digital. No somos una agencia mas: somos estrategas, creadores y tecnologos apasionados por transformar negocios.
+                    </p>
+                    <p class="nosotros-text anim-fade-up">
+                        Nuestro enfoque se basa en datos, creatividad y un compromiso inquebrantable con los resultados. Cada proyecto que emprendemos es una oportunidad para superar expectativas y generar impacto real.
+                    </p>
+                    <div class="nosotros-values anim-fade-up">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Resultados medibles</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Transparencia total</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Innovacion continua</span>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Soporte dedicado</span>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary anim-fade-up" style="margin-top: 1.5rem;">
+                        <span>Comenzar proyecto</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="por-que" id="por-que">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag anim-fade-up">Por que NexusDigital</span>
+                <h2 class="section-title anim-fade-up">La diferencia esta en <span class="text-gradient">como trabajamos</span></h2>
+                <p class="section-desc anim-fade-up">No solo ejecutamos proyectos, creamos alianzas estrategicas. Estas son las razones por las que nuestros clientes confian en nosotros.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card anim-fade-up">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Velocidad de ejecucion</h3>
+                    <p>Metodologias agiles que nos permiten entregar en tiempo recorcd sin sacrificar calidad. Tu proyecto no se estanca.</p>
+                </div>
+                <div class="why-card anim-fade-up" style="animation-delay: 0.1s">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Garantia de calidad</h3>
+                    <p>Cada deliverable pasa por rigurosos controles de calidad. No nos conformamos con "suficientemente bueno".</p>
+                </div>
+                <div class="why-card anim-fade-up" style="animation-delay: 0.2s">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3>Enfoque estrategico</h3>
+                    <p>Cada accion esta respaldada por datos e investigacion. No hacemos nada al azar; todo tiene un proposito medible.</p>
+                </div>
+                <div class="why-card anim-fade-up" style="animation-delay: 0.3s">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Comunicacion directa</h3>
+                    <p>Un equipo dedicado que te mantiene informado en cada paso. Sin intermediarios, sin sorpresas, sin excusas.</p>
+                </div>
+                <div class="why-card anim-fade-up" style="animation-delay: 0.4s">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>Tecnologia de punta</h3>
+                    <p>Utilizamos las herramientas y tecnologias mas recientes para garantizar que tu proyecto este a la vanguardia.</p>
+                </div>
+                <div class="why-card anim-fade-up" style="animation-delay: 0.5s">
+                    <div class="why-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>ROI transparente</h3>
+                    <p>Reportes detallados y claros que muestran exactamente donde va tu inversion y que resultados genera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag anim-fade-up">Contacto</span>
+                <h2 class="section-title anim-fade-up">Hablemos de tu <span class="text-gradient">proyecto</span></h2>
+                <p class="section-desc anim-fade-up">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas. Tu proyecto es nuestra proxima historia de exito.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper anim-fade-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electronico</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+52 (000) 000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Servicio de interes</label>
+                                <select id="servicio" name="servicio" required>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option value="marketing">Marketing Digital</option>
+                                    <option value="diseno">Diseno Grafico</option>
+                                    <option value="desarrollo">Desarrollo Web</option>
+                                    <option value="integral">Paquete Integral</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="presupuesto">Presupuesto estimado</label>
+                            <select id="presupuesto" name="presupuesto">
+                                <option value="" disabled selected>Selecciona un rango</option>
+                                <option value="1000-3000">$1,000 - $3,000 USD</option>
+                                <option value="3000-7000">$3,000 - $7,000 USD</option>
+                                <option value="7000-15000">$7,000 - $15,000 USD</option>
+                                <option value="15000+">$15,000+ USD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Cuentanos sobre tu proyecto</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu proyecto, objetivos y cualquier detalle relevante..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Enviar mensaje</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info anim-fade-up" style="animation-delay: 0.2s">
+                    <a href="mailto:NexusDigitalOff@gmail.com" class="contact-info-card contact-info-link">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>NexusDigitalOff@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/573001645699" target="_blank" rel="noopener noreferrer" class="contact-info-card contact-info-link">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>WhatsApp / Telefono</h4>
+                            <p>3001645699</p>
+                        </div>
+                    </a>
+                    <div class="contact-social">
+                        <a href="https://wa.me/573001645699" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@NexusDigitalo22" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13.2a8.16 8.16 0 005.58 2.18V12a4.83 4.83 0 01-3.77-1.59V6.69h3.77z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="44" height="44" rx="10" fill="#DC2626"/>
+                            <path d="M12 12L12 36L18 36L18 26L30 36L37 36L24 24L36 12L29 12L18 22L18 12Z" fill="white"/>
+                        </svg>
+                        <span class="logo-text">Nexus<span class="logo-highlight">Digital</span></span>
+                    </a>
+                    <p class="footer-desc">Impulsamos marcas en el mundo digital con estrategia, creatividad y tecnologia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Marketing Digital</a></li>
+                        <li><a href="#servicios">Diseno Grafico</a></li>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Sobre nosotros</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:NexusDigitalOff@gmail.com">NexusDigitalOff@gmail.com</a></li>
+                        <li><a href="https://wa.me/573001645699" target="_blank" rel="noopener noreferrer">3001645699</a></li>
+                        <li><a href="https://www.tiktok.com/@NexusDigitalo22" target="_blank" rel="noopener noreferrer">TikTok: @NexusDigitalo22</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexusDigital. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Politica de privacidad</a>
+                    <a href="#">Terminos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
