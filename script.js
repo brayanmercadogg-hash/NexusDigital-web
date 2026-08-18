@@ -141,30 +141,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================
     const contactForm = document.getElementById('contactForm');
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalHTML = submitBtn.innerHTML;
         submitBtn.innerHTML = '<span>Enviando...</span>';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
-            contactForm.innerHTML = `
-                <div class="form-success">
-                    <div class="form-success-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                const data = Object.fromEntries(formData);
+                contactForm.innerHTML = `
+                    <div class="form-success">
+                        <div class="form-success-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3>¡Mensaje enviado!</h3>
+                        <p>Gracias ${data.get('nombre') || ''}. Nos pondremos en contacto contigo en menos de 24 horas.</p>
                     </div>
-                    <h3>¡Mensaje enviado!</h3>
-                    <p>Gracias ${data.nombre || ''}. Nos pondremos en contacto contigo en menos de 24 horas.</p>
-                </div>
-            `;
-        }, 1500);
+                `;
+            } else {
+                throw new Error('Error al enviar');
+            }
+        } catch (err) {
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+            alert('Hubo un error al enviar el mensaje. Intenta de nuevo o contáctanos directamente por WhatsApp.');
+        }
     });
 
     // ========================
