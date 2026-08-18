@@ -592,10 +592,85 @@ img {
     position: relative;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+.pricing-table {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background: rgba(220, 38, 38, 0.08);
+}
+
+.pricing-table th {
+    padding: 20px 32px;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--red-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pricing-table td {
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.pricing-service {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pricing-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    border-radius: 10px;
+    color: var(--red-400);
+    flex-shrink: 0;
+}
+
+.pricing-service span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.pricing-value {
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.services-cta {
+    text-align: center;
+    margin-top: 2.5rem;
 }
 
 .service-card {
@@ -1545,6 +1620,11 @@ a.contact-info-link:hover {
         margin: 0 auto;
     }
 
+    .pricing-table th,
+    .pricing-table td {
+        padding: 16px 20px;
+    }
+
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1688,6 +1768,29 @@ a.contact-info-link:hover {
     .filter-btn {
         padding: 6px 14px;
         font-size: 0.75rem;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 14px 16px;
+    }
+
+    .pricing-service span {
+        font-size: 0.875rem;
+    }
+
+    .pricing-value {
+        font-size: 0.9375rem;
+    }
+
+    .pricing-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .pricing-icon svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
